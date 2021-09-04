@@ -1,0 +1,80 @@
+{% extends 'layout.html' %} {% block body%}
+<link rel="stylesheet" href="../static/css/index.css">
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <!-- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="jumbotron jumbotron-fluid mb-0 " style="background-color: white; align-items: center;">
+                        <div class="container">
+                            <h1 class="display-4 text-center">Green Watts</h1>
+
+                            <!-- <img src="../static/img/greenWBlack.png" class="rounded mx-auto d-block" width="200px" height="200px" alt=""> -->
+                            <p class="lead text-center">Las tecnologías de energías renovables son cada vez más competitivas en todo el mundo, en Colombia existe un potencial sustancial tanto para la energía solar como para la eólica, especialmente en las regiones costeras, como
+                                los departamentos del norte del Caribe (La Guajira, San Andrés, Atlántico y Magdalena) y en el suroeste (Valle del Cauca y Cauca).</p>
+                            <p class="lead text-center">Con base en este contexto, la previsión de la producción y el consumo de energía eólica y solar es fundamental para crear sistemas óptimos de micro-redes ubicadas en áreas clave del país. </p>
+                            <p class="lead text-center">Con este proyecto buscamos analizar los patrones de irradiancia solar, velocidad del viento y demanda de energía en un lugar específico, para luego concluir si una región dada permitiría la implementación óptima de micro-redes
+                                en edificios domésticos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End Jumbotron -->
+
+
+    <!-- Some cards -->
+    <div class="container-fluid ">
+        <div class="row " style="display: inline-block!important">
+            <div class="col-md-12 ">
+                <div class="row " style="padding: 20px;display: inline-block!important">
+                    <div class="col-md-12" style="background-color: white; ">
+                        <div class="card-deck">
+                            <div class="card">
+                                <div style="width: 60%; width: 100%;">
+                                    <!-- <img src="../static/img/estations.jpg" class="card-img-top" alt="data" height="100px" width="100px"> -->
+                                </div>
+                                <div class="card-body" style="color: black;">
+                                    <h5 class="card-title">Estaciones</h5>
+                                    <p class="card-text text-justify">Se analizaron once estaciones meteorológicas, en su mayoría en la costa atlantica. La mayoría con datos históricos desde 1998 hasta el 2020.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <!-- <img src="../static/img/data.jpg" class="card-img-top" alt="data" height="100px" width="100px"> -->
+                                <div class="card-body" style="color: black;">
+                                    <h5 class="card-title">Datos</h5>
+                                    <p class="card-text text-justify">La periodicidad de los datos tomados es de 30 minutos. Entre las variables utilizadas, se encuentran: temperatura, nubosidades, humedad, y las más importantes son: la irradiancia global y la velocidad del viento. Estas
+                                        dos últimas variables son las variables a predecir</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <!-- <img src="../static/img/model.png" class="card-img-top" alt="data" height="100px" width="100px"> -->
+                                <div class="card-body" style="color: black;">
+                                    <h5 class="card-title">Modelos</h5>
+                                    <p class="card-text text-justify">Se busca crear modelos tales que nos permitan estimar o predecir la velocidad del viento y la irradiancia global en una estación meteorológica. Para luego de tener estos valores, poder usar unos modelos de paneles solares
+                                        y turbinas eólicas que nos permitan saber cuanta energía en promedio se puede generar para el caso de una estimación futura.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <!-- <img src="../static/img/results_f.png" class="card-img-top" alt="data" height="100px" width="100px"> -->
+                                <div class="card-body" style="color: black;">
+                                    <h5 class="card-title">Resultados</h5>
+                                    <p class="card-text text-justify">Luego de probar con diferentes modelos, dos modelos fueron los escogidos: ARIMA y Regresión Lineal Horizontal. Cada modelo presenta limitaciones y ventajas descritas en la sección de 'Generación y energía' a la hora
+                                        de predecir la producción de electricidad. A pesar de todo se logra establecer la energía estimada generada y consumida, basada en un modelo de consumo ideal estudiado con ayuda de la compañía que nos presentó los
+                                        datos. </p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End cards -->
+
+</main>
+{% endblock %}

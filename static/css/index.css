@@ -1,0 +1,13 @@
+main {
+    background-color: white;
+}
+
+main>.container-fluid>.map {
+    background-color: aqua;
+}
+
+.map-home {
+    background-color: aqua;
+    width: 900px;
+    height: 380px;
+}

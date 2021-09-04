@@ -1,0 +1,11 @@
+[Unit]
+Description=application.service - A Flask application run with Gunicorn.
+After=network.target
+ 
+[Service]
+User=ec2-user
+Group= root
+WorkingDirectory=/home/ec2-user/project/
+ExecStart=/home/ec2-user/project/env/bin/gunicorn --workers 3 --bind 0.0.0.0:8080 wsgi:server
+[Install]
+WantedBy=multi-user.target

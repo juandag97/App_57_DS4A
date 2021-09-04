@@ -1,0 +1,25 @@
+/* Styles index */
+
+.map-home {
+    background-color: aqua;
+    /* width: 900px; */
+    height: 380px;
+}
+
+main>.container-fluid>.map-home {
+    background-color: aqua;
+    /* width: 900px; */
+    height: 380px;
+}
+
+.logo-image{
+    width: 120px;
+    overflow: hidden;
+ 
+
+}
+
+.sideB{
+    padding-top: 6.5rem;
+}
+/* End styles */

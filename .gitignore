@@ -1,0 +1,4 @@
+commands.txt
+__pycache__
+templates/notes.html
+apps/__pycache__/

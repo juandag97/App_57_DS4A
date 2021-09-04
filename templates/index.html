@@ -1,0 +1,565 @@
+{% extends 'layout.html' %} {% block body%}
+<link rel="stylesheet" href="../static/css/index.css">
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Share</button>
+                <button class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+  <span data-feather="calendar"></span>
+  This week
+</button>
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 map-home" style="background-color: white; height: 450px;">
+
+                        <h2>Mapa de calor de capacidad energética</h2>
+                        <div class="btn-group dropend" style="padding: 20px 0 20px 0;">
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" style="margin: 0 15px 0 0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Fecha inicial
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" style="margin: 0 15px 0 0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Fecha final
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" style="margin: 0 15px 0 0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Estación más cercana
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Irradiancia
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe src="http://127.0.0.1:8080/map_app" width=600 height=900></iframe>
+
+
+                    </div>
+                    <!-- <div class="col-md-4">
+                        <div class="card" style="color: black;">
+                            <h5 class="card-header" style="color: black;">
+                                Consumo medio
+                            </h5>
+                            <div class="card-body" style="color: black;">
+                                <p class="card-text">
+                                    100 kW
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                Card footer
+                            </div>
+                        </div>
+                        <div class="card" style="color: black;">
+                            <h5 class="card-header" style="color: black;">
+                                Consumo medio
+                            </h5>
+                            <div class="card-body" style="color: black;">
+                                <p class="card-text">
+                                    100 kW
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                Card footer
+                            </div>
+                            <div class="card" style="color: black;">
+                                <h5 class="card-header" style="color: black;">
+                                    Consumo medio
+                                </h5>
+                                <div class="card-body" style="color: black;">
+                                    <p class="card-text">
+                                        100 kW
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    Card footer
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+    <!-- <section class="map-inputs">
+        <div class="map col-lg-9" style="background-color: green; width: 900px; height: 380px;"></div>
+        <div class="indicators" style="background-color: blue; width: 200px; height: 380px;">
+            <div class="card" style="width: 200px; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Some Indicators -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <h2 style="padding: 30px 0 50px 0">Indicadores</h2>
+                    <div class="card-deck">
+                        <div class="card">
+                            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                            <div class="card-body" ">
+                                <h5 class="card-title " style="color: black ">Estación</h5>
+                                <h6 class="card-title " style="color: green ">73.00 - 20.00</h5>
+                            </div>
+                            <div class="card-footer " style="color: black ">
+                                <small class=" text ">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <!-- <img class="card-img-top " src="... " alt="Card image cap "> -->
+                            <div class="card-body " style="color: black ">
+                                <h5 class="card-title ">Irradiancia media</h5>
+                                <h6 class="card-text " style="color: green ">73 kW m2</p>
+                            </div>
+                            <div class="card-footer " style="color: black ">
+                                <small class="text ">Agosto 20, 8:00 UTC</small>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <!-- <img class="card-img-top " src="... " alt="Card image cap "> -->
+                            <div class="card-body " style="color: black ">
+                                <h5 class="card-title ">Temperatura media</h5>
+                                <h6 class="card-text " style="color: green ">31°C</p>
+                            </div>
+                            <div class="card-footer " style="color: black ">
+                                <small class="text ">Agosto 20, 8:00 UTC</small>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <!-- <img class="card-img-top " src="... " alt="Card image cap "> -->
+                            <div class="card-body " style="color: black ">
+                                <h5 class="card-title ">Velocidad de viento media</h5>
+                                <h6 class="card-text " style="color: green ">31 kh</p>
+                            </div>
+                            <div class="card-footer " style="color: black ">
+                                <small class="text ">Agosto 20, 8:00 UTC</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End indicators -->
+
+    <!-- Consumo en el hogar -->
+
+    <section>
+        <h2 style="padding: 30px 0 50px 0 ">Distribución de consumo en el hogar</h2>
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-md-12 " style="height: 300px; ">
+                    <div class="row " style="height: 100%; ">
+                        <div class="col-md-6 " style="background-color: white; height: 100%; ">
+                            <h4 style="padding: 0 0 20px 0 ">Elige tu micro-red</h2>
+                                <div class="table-responsive ">
+                                    <table class="table table-sm ">
+                                        <!-- <thead>
+                                            <tr>
+                                                <th>Electrodomestico</th>
+                                                <th>Potencia W/H</th>
+                                                <th>Porcentaje</th>
+                                            </tr>
+                                        </thead> -->
+                                        <tbody>
+                                            <tr>
+                                                <td>Paneles solares</td>
+                                                <td>
+                                                    <div class="btn-group fa-pull-right " style="padding: 0 0 0 0; ">
+                                                        <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Clase
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Cantidad
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Turbinas eólicas</td>
+                                                <td>
+                                                    <div class="btn-group fa-pull-right " style="padding: 0 0 0 0; ">
+                                                        <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Clase
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Cantidad
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Región</td>
+                                                <td>
+                                                    <div class="btn-group fa-pull-right " style="padding: 0 0 0 0; ">
+                                                        <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Región
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Fecha final
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div> -->
+                                                        </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Costo kWh</td>
+                                                <td>
+                                                    <div class="btn-group fa-pull-right " style="padding: 0 0 0 0; ">
+                                                        <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Región
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="dropdown ">
+                                                            <button class="btn btn-success dropdown-toggle " style="margin: 0 15px 0 0 " type="button " id="dropdownMenuButton " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">
+                                                          Fecha final
+                                                        </button>
+                                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton ">
+                                                                <a class="dropdown-item " href="# ">Action</a>
+                                                                <a class="dropdown-item " href="# ">Another action</a>
+                                                                <a class="dropdown-item " href="# ">Something else here</a>
+                                                            </div>
+                                                        </div> -->
+                                                        </div>
+                                                    </td>
+
+                                            </tr>
+
+                                    </table>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6 " style="background-color: white; height: 100%; ">
+                                        <h4 style="padding: 0 0 20px 0 ">Energía promedio generada</h2>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <h2 style="padding: 30px 0 50px 0 ">Tu microred</h2>
+                        <div class="container-fluid ">
+                            <div class="row ">
+                                <div class="col-md-12 " style="height: 250px; ">
+                                    <div class="row " style="height: 100%; background-color: white; ">
+                                        <div class="table-responsive ">
+                                            <table class="table table-sm ">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Electrodomestico</th>
+                                                        <th>Potencia W/H</th>
+                                                        <th>Porcentaje</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Nevera</td>
+                                                        <td>200 W</td>
+                                                        <td>20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nevera</td>
+                                                        <td>200 W</td>
+                                                        <td>20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nevera</td>
+                                                        <td>200 W</td>
+                                                        <td>20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nevera</td>
+                                                        <td>200 W</td>
+                                                        <td>20%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nevera</td>
+                                                        <td>200 W</td>
+                                                        <td>20%</td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </section>
+
+    <!-- Fin seccion consumo  -->
+
+    <!-- <div class="container-fluid ">
+        <div class="row ">
+            <div class="col-md-12 ">
+                <div class="row ">
+                    <div class="col-md-5 map-home " style="background-color: white; height: 450px; ">
+                        <img src="../static/img/house.PNG " alt="house ">
+                    </div>
+                    <div class="col-md-7 float-md-right ">
+                        <div class="table-responsive ">
+                            <table class="table table-sm ">
+                                <thead>
+                                    <tr>
+                                        <th>Electrodomestico</th>
+                                        <th>Potencia W/H</th>
+                                        <th>Porcentaje</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Nevera</td>
+                                        <td>200 W</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nevera</td>
+                                        <td>200 W</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nevera</td>
+                                        <td>200 W</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nevera</td>
+                                        <td>200 W</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nevera</td>
+                                        <td>200 W</td>
+                                        <td>20%</td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="table-responsive ">
+        <table class="table table-striped table-sm ">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1,001</td>
+                    <td>Lorem</td>
+                    <td>ipsum</td>
+                    <td>dolor</td>
+                    <td>sit</td>
+                </tr>
+                <tr>
+                    <td>1,002</td>
+                    <td>amet</td>
+                    <td>consectetur</td>
+                    <td>adipiscing</td>
+                    <td>elit</td>
+                </tr>
+                <tr>
+                    <td>1,003</td>
+                    <td>Integer</td>
+                    <td>nec</td>
+                    <td>odio</td>
+                    <td>Praesent</td>
+                </tr>
+                <tr>
+                    <td>1,003</td>
+                    <td>libero</td>
+                    <td>Sed</td>
+                    <td>cursus</td>
+                    <td>ante</td>
+                </tr>
+                <tr>
+                    <td>1,004</td>
+                    <td>dapibus</td>
+                    <td>diam</td>
+                    <td>Sed</td>
+                    <td>nisi</td>
+                </tr>
+                <tr>
+                    <td>1,005</td>
+                    <td>Nulla</td>
+                    <td>quis</td>
+                    <td>sem</td>
+                    <td>at</td>
+                </tr>
+                <tr>
+                    <td>1,006</td>
+                    <td>nibh</td>
+                    <td>elementum</td>
+                    <td>imperdiet</td>
+                    <td>Duis</td>
+                </tr>
+                <tr>
+                    <td>1,007</td>
+                    <td>sagittis</td>
+                    <td>ipsum</td>
+                    <td>Praesent</td>
+                    <td>mauris</td>
+                </tr>
+                <tr>
+                    <td>1,008</td>
+                    <td>Fusce</td>
+                    <td>nec</td>
+                    <td>tellus</td>
+                    <td>sed</td>
+                </tr>
+                <tr>
+                    <td>1,009</td>
+                    <td>augue</td>
+                    <td>semper</td>
+                    <td>porta</td>
+                    <td>Mauris</td>
+                </tr>
+                <tr>
+                    <td>1,010</td>
+                    <td>massa</td>
+                    <td>Vestibulum</td>
+                    <td>lacinia</td>
+                    <td>arcu</td>
+                </tr>
+                <tr>
+                    <td>1,011</td>
+                    <td>eget</td>
+                    <td>nulla</td>
+                    <td>Class</td>
+                    <td>aptent</td>
+                </tr>
+                <tr>
+                    <td>1,012</td>
+                    <td>taciti</td>
+                    <td>sociosqu</td>
+                    <td>ad</td>
+                    <td>litora</td>
+                </tr>
+                <tr>
+                    <td>1,013</td>
+                    <td>torquent</td>
+                    <td>per</td>
+                    <td>conubia</td>
+                    <td>nostra</td>
+                </tr>
+                <tr>
+                    <td>1,014</td>
+                    <td>per</td>
+                    <td>inceptos</td>
+                    <td>himenaeos</td>
+                    <td>Curabitur</td>
+                </tr>
+                <tr>
+                    <td>1,015</td>
+                    <td>sodales</td>
+                    <td>ligula</td>
+                    <td>in</td>
+                    <td>libero</td>
+                </tr>
+            </tbody>
+        </table> -->
+    <!-- </div> -->
+</main>
+</div>
+</div>
+{% endblock %}
